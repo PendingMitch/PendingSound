@@ -9,8 +9,8 @@ AddEventHandler("onResourceStart", function(resourceName)
     print("|  __/  __/ | | | (_| | | | | | (_| | |_| |  __/\\ V /  __/ | (_) | |_) | | | | | |  __/ | | | |_ ")
     print("|_|   \\___|_| |_|\\__,_|_|_| |_|\\__, |____/ \\___| \\_/ \\___|_|\\___/| .__/|_| |_| |_|\\___|_| |_|\\__|")
     print("                               |___/                             |_|                             ")
-    print("Join PendingDevelopment Discord for assistance: https://pending-medical-help.vercel.app/discord")
-	print("OR: See the thread here - ")
+    print("See other projects such as PendingMedical: https://pending-medical-help.vercel.app/")
+    print("See the thread for support here - ")
 end);
 
 function PlaySound(sound, resource, volume)
