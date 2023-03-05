@@ -21,4 +21,45 @@ files {
   "sound2.ogg"
 }
 ```
-6. Use [PlaySound](/#play-sound) export.
+6. Use [PlaySound](/#exports) export.
+
+---
+
+# Exports
+
+## PlaySound - Client
+
+```lua
+exports["PendingSound"]:PlaySound(name, resource, volume)
+```
+E.G.:  
+name: "sound.ogg"  
+resource: "MyResource"  
+volume: 1 (Volume is between 0-1)  
+
+```lua
+exports["PendingSound"]:PlaySound("sound.ogg", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlaySound("sound.ogg", GetCurrentResourceName(), 1)
+```
+
+## PlaySound - Server
+
+```lua
+exports["PendingSound"]:PlaySound(name, resource, volume)
+```
+E.G.:  
+src: -1  
+name: "sound.ogg"  
+resource: "MyResource"  
+volume: 1 (Volume is between 0-1)  
+
+```lua
+exports["PendingSound"]:PlaySound(-1, "sound.ogg", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlaySound(-1, "sound.ogg", GetCurrentResourceName(), 1)
+```
