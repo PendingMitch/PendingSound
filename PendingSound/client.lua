@@ -11,20 +11,19 @@ AddEventHandler("onResourceStart", function(resourceName)
     print("                               |___/                             |_|                             ")
     print("Join PendingDevelopment Discord for assistance: https://pending-medical-help.vercel.app/discord")
 end);
-function PlaySound(soundName, volume)
+
+function PlaySound(sound, resource, volume)
 	if type(volume) ~= "number" then
 		volume = 1;
 	end;
-	if type(soundName) ~= "string" then
-		return;
-	end;
 	SendNUIMessage({
 		type = "PlaySound",
-		audioFile = soundName,
+		audioFile = ConvertToHTTPSString(sound, resource),
 		volume = volume
 	});
 end;
 exports("PlaySound", PlaySound);
+
 function ConvertToHTTPSString(SoundFile, ResourceName)
 	if type(SoundFile) ~= "string" or type(ResourceName) ~= "string" then
 		print(SoundFile, "or", ResourceName, "is not a string value. ConvertToHTTPSString");
