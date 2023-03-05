@@ -10,6 +10,7 @@ AddEventHandler("onResourceStart", function(resourceName)
     print("|_|   \\___|_| |_|\\__,_|_|_| |_|\\__, |____/ \\___| \\_/ \\___|_|\\___/| .__/|_| |_| |_|\\___|_| |_|\\__|")
     print("                               |___/                             |_|                             ")
     print("Join PendingDevelopment Discord for assistance: https://pending-medical-help.vercel.app/discord")
+	print("OR: See the thread here - ")
 end);
 
 function PlaySound(sound, resource, volume)
@@ -24,10 +25,13 @@ function PlaySound(sound, resource, volume)
 end;
 exports("PlaySound", PlaySound);
 
+RegisterNetEvent("PendingSound:PlaySound")
+AddEventHandler("PendingSound:PlaySound", PlaySound)
+
 function ConvertToHTTPSString(SoundFile, ResourceName)
 	if type(SoundFile) ~= "string" or type(ResourceName) ~= "string" then
 		print(SoundFile, "or", ResourceName, "is not a string value. ConvertToHTTPSString");
 		return "SOUND/RESOURCE NAME ERROR - NOT A STRING.";
 	end;
-	return "https://cfx-nui-" .. ResourceName .. "/" .. SoundFile;
+	return "https://cfx-nui-" .. ResourceName:lower() .. "/" .. SoundFile:lower();
 end;

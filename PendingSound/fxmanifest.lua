@@ -8,6 +8,7 @@ version '1.0.0'
 
 -- What to run
 client_scripts {'client.lua'}
+server_scripts {'server.lua'}
 
 files {'html/*', 'html/sounds/*.ogg'}
 ui_page "html/index.html"
