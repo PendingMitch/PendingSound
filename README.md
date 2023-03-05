@@ -9,10 +9,11 @@ This utility resource is intended to create a simpler, and modular way for sound
 
 ## Play a sound
 
-1. Add `ensure PendingSound` to your server.cfg **BEFORE** any resources with sound playing through PendingSound. 
-2. Create or edit a resource that is above the "cerelean" FX Version. See [Resource Manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/#fx-version-cerulean-2020-05) for more information.
-3. Add the sound files that you wish to 
-4. Add the following in your `__resource.lua` file, replacing the sound file names with the ones that you will use. There is support for all sound files that can be played through HTML and FiveM's NUI system. !! Ensure that you add the file extension name at the end, and any folder directories that may be before the sound file itself !! 
+1. Add `PendingSound` to your `resources` folder.
+2. Add `ensure PendingSound` to your server.cfg **BEFORE** any resources with sound playing through PendingSound. 
+3. Create or edit a resource that is above the "cerelean" FX Version. See [Resource Manifest](https://docs.fivem.net/docs/scripting-reference/resource-manifest/resource-manifest/#fx-version-cerulean-2020-05) for more information.
+4. Add the sound files that you wish to play into the resource that you wish to play it from.
+5. Add the following in your `__resource.lua` file, replacing the sound file names with the ones that you will use. There is support for all sound files that can be played through HTML and FiveM's NUI system. !! Ensure that you add the file extension name at the end, and any folder directories that may be before the sound file itself !! 
 ```lua 
 dependency 'PendingSound'
 files {
@@ -20,4 +21,4 @@ files {
   "sound2.ogg"
 }
 ```
-4. Use [PlaySound](/#play-sound) export.
+6. Use [PlaySound](/#play-sound) export.
