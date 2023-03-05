@@ -10,7 +10,7 @@ AddEventHandler("onResourceStart", function(resourceName)
     print("|_|   \\___|_| |_|\\__,_|_|_| |_|\\__, |____/ \\___| \\_/ \\___|_|\\___/| .__/|_| |_| |_|\\___|_| |_|\\__|")
     print("                               |___/                             |_|                             ")
     print("See other projects such as PendingMedical: https://pending-medical-help.vercel.app/")
-    print("See the thread for support here - ")
+    print("See the thread for support here - https://forum.cfx.re/t/pendingsound-a-simple-utility-resource-to-allow-you-to-play-sounds-to-your-clients/5039257")
 end);
 
 function PlaySound(sound, resource, volume)
