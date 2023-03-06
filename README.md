@@ -121,7 +121,7 @@ exports["PendingSound"]:StopSound("sound.ogg", GetCurrentResourceName())
 ## StopSound - Server
 
 ```lua
-exports["PendingSound"]:StopSound(name, resource)
+exports["PendingSound"]:StopSound(src, name, resource)
 ```
 E.G.:  
 src: -1  
