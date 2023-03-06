@@ -10,5 +10,5 @@ version '1.0.0'
 client_scripts {'client.lua'}
 server_scripts {'server.lua'}
 
-files {'html/*', 'html/sounds/*.ogg'}
+files {'html/index.html', 'html/js/*.js'}
 ui_page "html/index.html"
