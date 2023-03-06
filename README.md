@@ -85,7 +85,7 @@ exports["PendingSound"]:PlaySoundURL("https://mywebsite.com/mymp3.mp3", GetCurre
 ## PlaySoundURL - Server
 
 ```lua
-exports["PendingSound"]:PlaySoundURL(url, resource, volume)
+exports["PendingSound"]:PlaySoundURL(src, url, resource, volume)
 ```
 E.G.:  
 src: -1  
