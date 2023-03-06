@@ -31,9 +31,15 @@ function playAudio(id, audioFile, volume) {
   Audios[id].volume = volume;
   Audios[id].play();
 
-  Audios[id].addEventListener("ended", function () {
-    Audios.splice(id, 1);
-  });
-
+  let OnStop = () => {
+    RemoveFromArray(id);
+  };
+  Audios[id].addEventListener("ended", OnStop);
+  Audios[id].addEventListener("pause", OnStop);
+  
   console.log(`Now playing an audio named ${audioFile} under id ${id}`);
+}
+
+function RemoveFromArray(id) {
+  Audios.splice(id, 1);
 }
