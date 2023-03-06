@@ -22,10 +22,7 @@ RegisterNetEvent("PendingSound:PlaySound")
 AddEventHandler("PendingSound:PlaySound", PlaySound)
 
 function StopSound(sound, resource)
-	SendNUIMessage({
-		type = "StopSound",
-		audioFile = ConvertToHTTPSString(sound, resource),
-	});
+	StopSoundURL(ConvertToHTTPSString(sound, resource))
 end
 exports("StopSound", StopSound)
 
@@ -46,6 +43,17 @@ exports("PlaySoundURL", PlaySoundURL)
 
 RegisterNetEvent("PendingSound:PlaySoundURL")
 AddEventHandler("PendingSound:PlaySoundURL", PlaySoundURL)
+
+function StopSoundURL(sound)
+	SendNUIMessage({
+		type = "StopSound",
+		audioFile = sound,
+	});
+end
+exports("StopSoundURL", StopSoundURL)
+
+RegisterNetEvent("PendingSound:StopSoundURL")
+AddEventHandler("PendingSound:StopSoundURL", StopSoundURL)
 
 function ConvertToHTTPSString(SoundFile, ResourceName)
 	if type(SoundFile) ~= "string" or type(ResourceName) ~= "string" then
