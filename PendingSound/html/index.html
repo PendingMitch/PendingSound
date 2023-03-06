@@ -44,7 +44,6 @@
         Audios[id].volume = volume;
         Audios[id].play();
 
-        console.log(Audios[id].src)
         Audios[id].addEventListener("ended", function () {
           Audios.splice(id, 1);
         });
