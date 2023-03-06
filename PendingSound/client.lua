@@ -14,15 +14,8 @@ AddEventHandler("onResourceStart", function(resourceName)
 end);
 
 function PlaySound(sound, resource, volume)
-	if type(volume) ~= "number" then
-		volume = 1;
-	end;
-	SendNUIMessage({
-		type = "PlaySound",
-		audioFile = ConvertToHTTPSString(sound, resource),
-		volume = volume
-	});
-end;
+	PlaySoundURL(ConvertToHTTPSString(sound, resource), volume)
+end
 exports("PlaySound", PlaySound);
 
 RegisterNetEvent("PendingSound:PlaySound")
@@ -40,12 +33,15 @@ RegisterNetEvent("PendingSound:StopSound")
 AddEventHandler("PendingSound:StopSound", StopSound)
 
 function PlaySoundURL(sound, volume)
+	if type(volume) ~= "number" then
+		volume = 1;
+	end;
 	SendNUIMessage({
 		type = "PlaySound",
 		audioFile = sound,
 		volume = volume
 	});
-end
+end;
 exports("PlaySoundURL", PlaySoundURL)
 
 RegisterNetEvent("PendingSound:PlaySoundURL")
