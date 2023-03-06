@@ -21,7 +21,7 @@ files {
   "sound2.ogg"
 }
 ```
-6. Use [PlaySound](/#exports) export.
+6. Use PlaySound export.
 
 ---
 
