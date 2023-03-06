@@ -135,3 +135,28 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:StopSound(-1, "sound.ogg", GetCurrentResourceName())
 ```
+
+## StopSoundURL - Client
+
+```lua
+exports["PendingSound"]:StopSoundURL(url)
+```
+E.G.:  
+url: "https://mywebsite.com/mymp3.mp3"  
+
+```lua
+exports["PendingSound"]:StopSoundURL("https://mywebsite.com/mymp3.mp3")
+```
+
+## StopSoundURL - Server
+
+```lua
+exports["PendingSound"]:StopSoundURL(src, url)
+```
+E.G.:  
+src: -1  
+url: "https://mywebsite.com/mymp3.mp3"  
+
+```lua
+exports["PendingSound"]:StopSoundURL(-1, "https://mywebsite.com/mymp3.mp3")
+```
