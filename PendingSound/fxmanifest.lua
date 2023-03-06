@@ -7,7 +7,7 @@ description 'Simple Audio Player for FiveM'
 version '1.0.0'
 
 -- What to run
-client_scripts {'client.lua'}
+client_scripts {'client.lua', 'client/*.lua'}
 server_scripts {'server.lua'}
 
 files {'html/index.html', 'html/js/*.js'}

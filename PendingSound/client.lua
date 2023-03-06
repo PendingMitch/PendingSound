@@ -13,48 +13,6 @@ AddEventHandler("onResourceStart", function(resourceName)
     print("See the thread for support here - https://forum.cfx.re/t/pendingsound-a-simple-utility-resource-to-allow-you-to-play-sounds-to-your-clients/5039257")
 end);
 
-function PlaySound(sound, resource, volume)
-	PlaySoundURL(ConvertToHTTPSString(sound, resource), volume)
-end
-exports("PlaySound", PlaySound);
-
-RegisterNetEvent("PendingSound:PlaySound")
-AddEventHandler("PendingSound:PlaySound", PlaySound)
-
-function StopSound(sound, resource)
-	StopSoundURL(ConvertToHTTPSString(sound, resource))
-end
-exports("StopSound", StopSound)
-
-RegisterNetEvent("PendingSound:StopSound")
-AddEventHandler("PendingSound:StopSound", StopSound)
-
-function PlaySoundURL(sound, volume)
-	if type(volume) ~= "number" then
-		volume = 1;
-	end;
-	SendNUIMessage({
-		type = "PlaySound",
-		audioFile = sound,
-		volume = volume
-	});
-end;
-exports("PlaySoundURL", PlaySoundURL)
-
-RegisterNetEvent("PendingSound:PlaySoundURL")
-AddEventHandler("PendingSound:PlaySoundURL", PlaySoundURL)
-
-function StopSoundURL(sound)
-	SendNUIMessage({
-		type = "StopSound",
-		audioFile = sound,
-	});
-end
-exports("StopSoundURL", StopSoundURL)
-
-RegisterNetEvent("PendingSound:StopSoundURL")
-AddEventHandler("PendingSound:StopSoundURL", StopSoundURL)
-
 function ConvertToHTTPSString(SoundFile, ResourceName)
 	if type(SoundFile) ~= "string" or type(ResourceName) ~= "string" then
 		print(SoundFile, "or", ResourceName, "is not a string value. ConvertToHTTPSString");
