@@ -63,3 +63,38 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:PlaySound(-1, "sound.ogg", GetCurrentResourceName(), 1)
 ```
+
+## StopSound - Client
+
+```lua
+exports["PendingSound"]:StopSound(name, resource)
+```
+E.G.:  
+name: "sound.ogg"  
+resource: "MyResource"  
+
+```lua
+exports["PendingSound"]:StopSound("sound.ogg", "MyResource")
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:StopSound("sound.ogg", GetCurrentResourceName())
+```
+
+## StopSound - Server
+
+```lua
+exports["PendingSound"]:StopSound(name, resource)
+```
+E.G.:  
+src: -1  
+name: "sound.ogg"  
+resource: "MyResource"  
+
+```lua
+exports["PendingSound"]:StopSound(-1, "sound.ogg", "MyResource")
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:StopSound(-1, "sound.ogg", GetCurrentResourceName())
+```
