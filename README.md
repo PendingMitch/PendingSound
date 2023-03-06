@@ -64,6 +64,43 @@ You can combat repeating "MyResource" by doing the following:
 exports["PendingSound"]:PlaySound(-1, "sound.ogg", GetCurrentResourceName(), 1)
 ```
 
+## PlaySoundURL - Client
+
+```lua
+exports["PendingSound"]:PlaySoundURL(name, resource, volume)
+```
+E.G.:  
+name: "https://mywebsite.com/mymp3.mp3"  
+resource: "MyResource"  
+volume: 1 (Volume is between 0-1)  
+
+```lua
+exports["PendingSound"]:PlaySoundURL("https://mywebsite.com/mymp3.mp3", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlaySoundURL("https://mywebsite.com/mymp3.mp3", GetCurrentResourceName(), 1)
+```
+
+## PlaySoundURL - Server
+
+```lua
+exports["PendingSound"]:PlaySoundURL(url, resource, volume)
+```
+E.G.:  
+src: -1  
+url: "https://mywebsite.com/mymp3.mp3"  
+resource: "MyResource"  
+volume: 1 (Volume is between 0-1)  
+
+```lua
+exports["PendingSound"]:PlaySoundURL(-1, "https://mywebsite.com/mymp3.mp3", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlaySoundURL(-1, "https://mywebsite.com/mymp3.mp3", GetCurrentResourceName(), 1)
+```
+
 ## StopSound - Client
 
 ```lua
