@@ -48,7 +48,7 @@ exports["PendingSound"]:PlaySound("sound.ogg", GetCurrentResourceName(), 1)
 ## PlaySound - Server
 
 ```lua
-exports["PendingSound"]:PlaySound(name, resource, volume)
+exports["PendingSound"]:PlaySound(src, name, resource, volume)
 ```
 E.G.:  
 src: -1  
