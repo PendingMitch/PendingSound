@@ -16,3 +16,8 @@ function StopSound(src, sound, resource)
     TriggerClientEvent("PendingSound:StopSound", src, sound, resource)
 end
 exports("StopSound", StopSound)
+
+function PlaySoundURL(src, sound, volume)
+    TriggerClientEvent("PendingSound:PlaySoundURL", src, sound, volume)
+end
+exports("PlaySoundURL", PlaySoundURL)

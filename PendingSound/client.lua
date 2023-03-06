@@ -39,6 +39,18 @@ exports("StopSound", StopSound)
 RegisterNetEvent("PendingSound:StopSound")
 AddEventHandler("PendingSound:StopSound", StopSound)
 
+function PlaySoundURL(sound, volume)
+	SendNUIMessage({
+		type = "PlaySound",
+		audioFile = sound,
+		volume = volume
+	});
+end
+exports("PlaySoundURL", PlaySoundURL)
+
+RegisterNetEvent("PendingSound:PlaySoundURL")
+AddEventHandler("PendingSound:PlaySoundURL", PlaySoundURL)
+
 function ConvertToHTTPSString(SoundFile, ResourceName)
 	if type(SoundFile) ~= "string" or type(ResourceName) ~= "string" then
 		print(SoundFile, "or", ResourceName, "is not a string value. ConvertToHTTPSString");

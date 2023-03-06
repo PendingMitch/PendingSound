@@ -9,7 +9,6 @@ window.addEventListener("message", function (event) {
   let id = Audios.length;
   let url = event.data.audioFile;
 
-  if (!url.includes("http")) url = `./sounds/${event.data.audioFile}`;
   let volume = event.data?.volume;
 
   playAudio(id, url, volume);
@@ -36,7 +35,7 @@ function playAudio(id, audioFile, volume) {
   };
   Audios[id].addEventListener("ended", OnStop);
   Audios[id].addEventListener("pause", OnStop);
-  
+
   console.log(`Now playing an audio named ${audioFile} under id ${id}`);
 }
 
