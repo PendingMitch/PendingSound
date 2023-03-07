@@ -4,7 +4,7 @@ games {'rdr3', 'gta5'}
 
 author 'PendingMitch'
 description 'Simple Audio Player for FiveM'
-version '1.0.0'
+version '1.2.1'
 
 -- What to run
 client_scripts {'client.lua', 'client/*.lua'}
