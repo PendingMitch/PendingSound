@@ -8,7 +8,7 @@ version '1.2.1'
 
 -- What to run
 client_scripts {'client.lua', 'client/*.lua'}
-server_scripts {'server.lua'}
+server_scripts {'server/*.lua'}
 
 files {'html/index.html', 'html/js/*.js'}
 ui_page "html/index.html"
