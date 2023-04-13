@@ -149,12 +149,6 @@ You can combat repeating "MyResource" by doing the following:
 exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", GetCurrentResourceName(), 1)
 ```
 
-
-
-
-
-
-
 ## StopSound - Client
 
 ```lua
