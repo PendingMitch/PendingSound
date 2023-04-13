@@ -26,7 +26,6 @@ files {
 ---
 
 # Exports
-
 ## PlaySound - Client
 
 ```lua
@@ -63,7 +62,7 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:PlaySound(-1, "sound.ogg", GetCurrentResourceName(), 1)
 ```
-
+----
 ## PlaySoundURL - Client
 
 ```lua
@@ -100,7 +99,7 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:PlaySoundURL(-1, "https://mywebsite.com/mymp3.mp3", GetCurrentResourceName(), 1)
 ```
-
+----
 ## PlayLocalSound - Client
 
 PlayLocalSound plays a sound based off a coordinate. This function only plays the sound to the play of which the client script is running on.
@@ -148,7 +147,7 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", GetCurrentResourceName(), 1)
 ```
-
+----
 ## StopSound - Client
 
 ```lua
@@ -183,7 +182,7 @@ You can combat repeating "MyResource" by doing the following:
 ```lua
 exports["PendingSound"]:StopSound(-1, "sound.ogg", GetCurrentResourceName())
 ```
-
+----
 ## StopSoundURL - Client
 
 ```lua
@@ -208,3 +207,4 @@ url: "https://mywebsite.com/mymp3.mp3"
 ```lua
 exports["PendingSound"]:StopSoundURL(-1, "https://mywebsite.com/mymp3.mp3")
 ```
+----
