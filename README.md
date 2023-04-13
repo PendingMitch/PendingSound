@@ -101,6 +101,60 @@ You can combat repeating "MyResource" by doing the following:
 exports["PendingSound"]:PlaySoundURL(-1, "https://mywebsite.com/mymp3.mp3", GetCurrentResourceName(), 1)
 ```
 
+## PlayLocalSound - Client
+
+PlayLocalSound plays a sound based off a coordinate. This function only plays the sound to the play of which the client script is running on.
+
+```lua
+exports["PendingSound"]:PlayLocalSound(pos, sound, resource, volume)
+```
+E.G.:  
+pos: {x = 0.0, y = 0.0, z = 0.0}  
+sound: "sound.ogg"  
+resource: "MyResource"
+volume: 1
+
+```lua
+  exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", GetCurrentResourceName(), 1)
+```
+
+## PlayLocalSound - Server
+
+!! This is an alias of 
+```lua
+TriggerServerEvent("PendingSound:PlayLocalSound", pos, sound, resource, volume)
+```
+
+PlayLocalSound plays a sound based off a coordinate. This function plays the sound to all clients. If they are close enough - they will hear it.
+
+
+```lua
+exports["PendingSound"]:PlayLocalSound(pos, sound, resource, volume)
+```
+E.G.:  
+pos: {x = 0.0, y = 0.0, z = 0.0}  
+sound: "sound.ogg"  
+resource: "MyResource"
+volume: 1
+
+```lua
+  exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", "MyResource", 1)
+```
+You can combat repeating "MyResource" by doing the following:
+```lua
+exports["PendingSound"]:PlayLocalSound({x = 0.0, y = 0.0, z = 0.0}, "sound.ogg", GetCurrentResourceName(), 1)
+```
+
+
+
+
+
+
+
 ## StopSound - Client
 
 ```lua
