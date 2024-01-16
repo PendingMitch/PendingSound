@@ -4,6 +4,9 @@ window.addEventListener("message", function (event) {
   let { location } = event.data;
 
   PlayerLocation = location;
+  Audios.forEach((Audio) => {
+    if (Audio.location) Audio.volume = GetUpdatedVolume(Audio.location)
+  })
 });
 
 function GetDistanceBetweenTwoPoints(x0, y0, z0, x1, y1, z1) {
