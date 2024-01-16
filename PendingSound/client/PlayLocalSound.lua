@@ -22,7 +22,7 @@ Citizen.CreateThread(function()
             location = GetEntityCoords(PlayerPedId())
         })
 
-        Citizen.Wait(0)
+        Citizen.Wait(200)
     end
 end)
 
